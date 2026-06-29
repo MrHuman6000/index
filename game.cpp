@@ -28,7 +28,7 @@ class Enemy {
     int hp;
     int attack;
 
-    ~Enemy() {
+    virtual ~Enemy() {
         cout << "The enemy had been deleted from memory" << endl;
     }
 
@@ -63,6 +63,7 @@ public:
 void Regeneration(int* quantity_potions, int reg) {
     if (quantity_potions == nullptr) {
         cout << "Error!" << endl;
+        return;
     }
     *quantity_potions += reg;
 
